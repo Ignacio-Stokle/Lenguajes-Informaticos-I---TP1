@@ -1,1 +1,0 @@
-En esta carpeta irán los estilos.

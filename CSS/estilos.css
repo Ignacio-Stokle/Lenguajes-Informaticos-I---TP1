@@ -1,0 +1,18 @@
+ /* ACÁ ARMO MI PALETA */
+:root {
+    --color-primario: #0ddb29;
+    --color-acento: #b5d30a;
+    --color-secundario:#0e0327;
+    --color-fondo:#1e319b;
+    --color-texto:#1a1a1a;
+    --color-texto-claro:#e6d7d7;
+    --fuente-principal: Quantico;
+}
+
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
