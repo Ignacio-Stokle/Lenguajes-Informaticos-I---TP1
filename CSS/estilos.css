@@ -1,11 +1,10 @@
  /* ACÁ ARMO MI PALETA */
 :root {
-    --color-primario: #0ddb29;
-    --color-acento: #b5d30a;
-    --color-secundario:#0e0327;
-    --color-fondo:#1e319b;
-    --color-texto:#1a1a1a;
-    --color-texto-claro:#e6d7d7;
+    --color-primario: #12161F;
+    --color-acento: #FFAA00;
+    --color-secundario:#1D2633;
+    --color-terciario:#283548;
+    --color-texto:#E2E8F0;
     --fuente-principal: Quantico;
 }
 

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio |</title>
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="icon" href="./IMG/Logo solo letra.png">
+    <title> | Inicio</title>
 </head>
 <body>
     <header>
         <h1></h1>
+        <img src="./IMG/Logo con texto.png" alt="logo-titulo" class="logo-titulo">
         <nav>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
@@ -18,13 +21,79 @@
         </nav>
     </header>
     <main>
+        <!--Seccion de presentacion-->
+        <section id="presentacion" class="presentacion">
+            <div class="contenedor">
+                <h2 class="titulo-principal">Un planeta entero hecho ciudad</h2>
+                <p>Rascacielos que atraviesan las nubes, millones de especies en las mismas avenidas y una vida nocturna que no se apaga nunca. Bienvenido al centro de la galaxia</p>
+                <a href="./lugares.html" class="boton">Lugares de interés</a>
+            </div>
+        </section>
 
+        <!--Seccion de identidad y caracteristicas-->
+        <section id="identidad" class="identidad">
+            <div class="contenedor">
+                <div>
+                    <h2>Identidad de Coruscant</h2>
+                    <p>Coruscant es una sola metrópolis que cubre toda la superficie del planeta. Durante milenios fue la capital política de la galaxia, y esa historia se nota en cada plaza, templo y edificio gubernamental.</p>
+                    <p>Su carácter se define por el contraste: los niveles altos son luminosos y ordenados, y los niveles bajos, más oscuros y sorprendentes, esconden mercados, cantinas y barrios con vida propia.</p>
+                    <p>Más información sobre el planeta en <a href="https://starwars-fandom-com.translate.goog/wiki/Coruscant?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" target="_blank" rel="noopener noreferrer">la enciclopedia de Star Wars.</a></p>
+                </div>
+                <aside>
+                    <h3>Datos rápidos</h3>
+                    <dl>
+                        <dt>Ubicación</dt>
+                        <dd>Nucleo Profundo, Sector Corusca.</dd>
+                        <dt>Poblacíon</dt>
+                        <dd>2 billones segun censo politico, cantidad total desconocida.</dd>
+                        <dt>Clima</dt>
+                        <dd>Controlado artificialmente en los niveles altos.</dd>
+                        <dt>Mejor momento para viajar</dt>
+                        <dd>Todo el año: La ciudad nunca duerme.</dd>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Seccion de historia del planeta-->
+         <section id="historia" class="historia">
+            <div class="contenedor">
+                <h2>Historia de Coruscant</h2>
+                <p>De mundo rocoso a capital de la galaxia: así se construyó la ciudad que hoy te recibe.</p>
+                <ol class="cronologia">
+                    <li>
+                        <h3>Los orígenes</h3>
+                        <p>Antes de ser una ciudad, Coruscant era un planeta con océanos y continentes. Sus primeros habitantes levantaron asentamientos que fueron creciendo sin parar.</p>
+                    </li>
+                    <li>
+                        <h3>El nacimiento de la metrópolis</h3>
+                        <p>Con el paso de los milenios, las construcciones cubrieron la superficie completa. Nacieron los niveles: los más altos reciben la luz del sol y los más bajos viven en penumbra.</p>
+                    </li>
+                    <li>
+                        <h3>Los niveles</h3>
+                        <p>El planeta se compuso por niveles que fueron escalando desde la superficie original hacia arriba, se ordenan con 0 para el mas bajo y deshabitado y 5127 para la superficie principal donde se encuentra la vida de clase alta.</p>
+                    </li>
+                    <li>
+                        <h3>Capital de la República Galáctica</h3>
+                        <p>Coruscant se convirtió en sede del Senado y centro político de miles de mundos. Se construyeron entonces el Senado Galáctico y el Templo Jedi, hoy sus lugares más visitados.</p>
+                    </li>
+                    <li>
+                        <h3>Tiempos de guerra y cambio</h3>
+                        <p>Durante las Guerras Clon, la ciudad fue escenario de tensiones políticas. Después, con el ascenso del Imperio, pasó a llamarse Centro Imperial.</p>
+                    </li>
+                    <li>
+                        <h3>La ciudad de hoy</h3>
+                        <p>Hoy Coruscant combina su patrimonio histórico con una vida cultural muy diversa, y recibe visitantes de toda la galaxia.</p>
+                    </li>
+                </ol>
+            </div>
+         </section>
     </main>
     <footer>
             <div class="footer-general">
                 <div class="info-footer">
                     <div class="foot-lgo-nombre">
-                        <img src="./Iconos/Logo_NotiRiver_Blanco.png" alt="lgo-notiriver">
+                        <img src="./IMG/Logo con texto.png" alt="lgo-notiriver">
                     </div>
                     <div class="footer-redes">
                         <ul>
@@ -42,10 +111,9 @@
                 </div>
                 <p>
                     <span>
-                        Noti-River es un sitio no oficial, creado por socios e hinchas del club y no tiene afiliación alguna con el Club Atlético River Plate.
-                        Para visitar el sitio oficial del club
-                        <a href="https://www.cariverplate.com.ar"> haz click aquí</a>.
-                        <br> &copy; Ignacio Stokle Calafell
+                        xxxxxx es una agencia de viajes y turismo especifica para Corsucant.
+                        Organizamos itinerarios, traslados, alojamiento y entradas a los principales atractivos del planeta.
+                        <br> &copy; Ignacio Stokle Calafell, Nahuel Tardino y Franco Arnijas.
                     </span>
                 </p>
             </div>
