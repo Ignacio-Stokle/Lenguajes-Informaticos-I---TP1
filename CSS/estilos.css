@@ -1,12 +1,12 @@
  /* ACÁ ARMO MI PALETA */
 :root {
     --color-primario: #12161F;
-    --color-acento: #FFAA00;
+    --color-acento: #f2a93b;
     --color-secundario:#1D2633;
     --color-terciario:#283548;
     --color-texto:#E2E8F0;
     --color-texto-secundario: #c9cfe8;
-    --fuente-principal: Quantico;
+    --fuente-principal: "Source Serif 4", Georgia, serif;
 }
 
 /* RESET BÁSICO */
@@ -15,13 +15,14 @@
     margin: 0;
     padding: 0;
 }
-
 body{
+    height: 100%;
+    width: 100%;
     background-color: var(--color-primario);
     color: var(--color-texto);
-    font-family: "Source Serif 4", Georgia, serif;
+    font-family: var(--fuente-principal);
     line-height: 1.65;
-    padding-top: 15%;
+    padding-top: 20dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +33,11 @@ header{
     width: 100%;
     background-color: var(--color-secundario);
     border-bottom: 2px solid var(--color-acento);
-    display: flex;
-    flex-direction: column;
     gap: 1dvh;
-    padding: 15px;
-    align-items: flex-start;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
 
@@ -67,7 +68,7 @@ h1{
 }
 
 nav ul{
-    height: fit;
+    height: fit-content;
     width: fit-content;
     list-style: none;
     display: flex;
@@ -84,10 +85,223 @@ nav a{
     text-decoration: none;
     color: var(--color-texto-secundario);
     transition: 0.2s ease;
+    font-size: clamp(.6rem, 2vh, 1rem);
 }
 nav a:hover{
     color: var(--color-acento);
 }
 
+footer{
+    width: 100%;
+    height: 22dvh;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    margin-top: 5dvh;
+    padding: 10px 0 25px;
+    border-top: 5px solid var(--color-acento);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-general{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7dvh 5dvh;
+    gap: 10px;
+}
+.info-footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.foot-lgo-nombre{
+    width: 15dvw;
+    height: 7dvh;
+    display: flex;
+    align-items: center;
+}
+.foot-lgo-nombre img{
+    max-height: 8dvh;
+}
+.footer-redes{
+    width: 15dvw;
+    height: 7dvh;
+    justify-self: end;
+}
+.footer-redes ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+.footer-redes li{
+    width: 5dvw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-redes a{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+.footer-redes svg{
+    height: 3dvh;
+    width: fit-content;
+}
+footer p{
+    width: 100%;
+    height: fit-content;
+    color: var(--color-texto-secundario);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: clamp(.1rem, min(1vw, 2dvh), .9rem);
+    font-weight: bold;
+    border-top: 2px solid var(--color-acento);
+    padding-top: 10px;
+}
+footer span{
+    text-align: start;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5dvh;
+}
+h2{
+    font-size: clamp(1rem, 5vh, 2rem);
+}
+h3{
+    font-size: clamp(.9rem, 4vh, 1.2rem);
+}
+h2, h3{
+    color: var(--color-texto);
+    letter-spacing: 2px;
+    font-family: "Big Shoulders Display", Impact, sans-serif;
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+}
+
 
 /* INDEX */
+.presentacion, .identidad, .historia{
+    width: 95%;
+}
+.presentacion p, .identidad p, .historia p{
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vh, 1rem);
+}
+.contenedor{
+    width: 100%;
+    padding: 3dvh;
+}
+.presentacion .contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+}
+.titulo-principal{
+    max-width: 55dvw;
+    font-size: clamp(2rem, 9vh, 6rem);
+    letter-spacing: 2px;
+    font-family: "Big Shoulders Display", Impact, sans-serif;
+}
+.presentacion p{
+    max-width: 35dvw;
+}
+.boton{
+    width: 10dvw;
+    height: 5dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: clamp(.6rem, 1.3vh, .9rem);
+    font-weight: bold;
+    transition: .2s ease;
+}
+.boton:hover{
+    background-color: var(--color-texto-secundario);
+}
+
+.identidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.identidad .contenedor{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1.3fr 1fr;
+}
+.identidad a{
+    color: var(--color-acento);
+    transition: .2s ease;
+}
+.identidad a:hover{
+    color: var(--color-texto);
+}
+.identidad dl{
+    margin: 0;
+}
+.identidad dt{
+    color: var(--color-acento);
+    font-weight: 600;
+    font-size: clamp(.9rem, 2vh, 1.1rem);
+}
+.identidad dd{
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vh, 1rem);
+}
+.identidad img{
+    height: 100dvh;
+    max-width: 80dvw;
+}
+
+
+.historia{
+    width: 100%;
+    background-color: var(--color-terciario);
+}
+.historia .contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.historia span{
+    color: var(--color-acento);
+}
+.cronologia{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.cronologia li{
+    border-left: 3px solid var(--color-acento);
+    padding-left: 3dvw;
+}
+
+
+/* CIUDAD */
