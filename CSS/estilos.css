@@ -7,6 +7,7 @@
     --color-texto:#E2E8F0;
     --color-texto-secundario: #c9cfe8;
     --fuente-principal: "Source Serif 4", Georgia, serif;
+    --fuente-titulo: "Big Shoulders Display", Impact, sans-serif;
 }
 
 /* RESET BÁSICO */
@@ -191,21 +192,20 @@ h3{
 h2, h3{
     color: var(--color-texto);
     letter-spacing: 2px;
-    font-family: "Big Shoulders Display", Impact, sans-serif;
+    font-family: var(--fuente-titulo);
     font-weight: 100;
 }
 a{
     text-decoration: none;
 }
-
-
-/* INDEX */
-.presentacion, .identidad, .historia{
-    width: 95%;
-}
-.presentacion p, .identidad p, .historia p{
+p{
     color: var(--color-texto-secundario);
     font-size: clamp(.8rem, 2vh, 1rem);
+}
+
+/* INDEX Y CIUDAD */
+.presentacion, .identidad, .historia, .caracteristicas, .barrios, .datos{
+    width: 95%;
 }
 .contenedor{
     width: 100%;
@@ -219,8 +219,6 @@ a{
 .titulo-principal{
     max-width: 55dvw;
     font-size: clamp(2rem, 9vh, 6rem);
-    letter-spacing: 2px;
-    font-family: "Big Shoulders Display", Impact, sans-serif;
 }
 .presentacion p{
     max-width: 35dvw;
@@ -260,15 +258,15 @@ a{
 .identidad a:hover{
     color: var(--color-texto);
 }
-.identidad dl{
+.identidad dl, .cultura, .itinerario, .datos dl{
     margin: 0;
 }
-.identidad dt{
+.identidad dt, .cultura strong, .itinerario li::marker, .datos dt{
     color: var(--color-acento);
     font-weight: 600;
     font-size: clamp(.9rem, 2vh, 1.1rem);
 }
-.identidad dd{
+.identidad dd, .costumbres li, .datos dd{
     margin: 0;
     color: var(--color-texto-secundario);
     font-size: clamp(.8rem, 2vh, 1rem);
@@ -303,5 +301,55 @@ a{
     padding-left: 3dvw;
 }
 
+.grilla-ciudad{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 3dvh;
+}
+.tarjeta{
+    border-left: 3px solid var(--color-acento);
+    padding-left: 3dvw;
+}
+.tarjeta h3{
+    margin-bottom: 1dvh;
+}
+.costumbres{
+    background-color: var(--color-terciario);
+    width: 100%;
+}
+.costumbres .contenedor{
+    width: 97%;
+    margin: auto;
+    display: grid;
+    gap: 3dvw;
+    grid-template-columns: 1fr 1fr;
 
-/* CIUDAD */
+}
+.costumbres ul{
+    list-style: none;
+}
+.itinerario{
+    padding-left: 20px;
+}
+.datos .contenedor{
+    display: grid;
+    gap: 3dvw;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+}
+.datos img{
+    height: 35dvh;
+}
+figure{
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--color-terciario);
+}
+figcaption{
+    padding: 0 0 5px 10px;
+    font-family: var(--fuente-titulo);
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: clamp(.8rem, 2vh, 1rem);
+}
