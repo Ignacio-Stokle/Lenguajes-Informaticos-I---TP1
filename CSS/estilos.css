@@ -238,6 +238,7 @@ p{
 }
 .boton:hover{
     background-color: var(--color-texto-secundario);
+    cursor: pointer;
 }
 
 .identidad{
@@ -352,4 +353,68 @@ figcaption{
     font-weight: lighter;
     letter-spacing: 1px;
     font-size: clamp(.8rem, 2vh, 1rem);
+}
+
+/* CONTACTO */
+.contacto{
+    padding: 2rem;
+    max-width: 90dvw;
+    margin: auto;
+    background-color: var(--color-secundario);
+    border-radius: 9px;
+    line-height: 1.65;
+}
+.contacto p{
+    margin-bottom: 3rem;
+}
+.contenedor-contacto{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.contacto-formulario{
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2dvh;
+}
+.contacto-formulario label{
+    color: var(--color-acento);
+}
+.contacto-formulario input, .contacto-formulario textarea{
+    border: 1px solid var(--color-texto-secundario);
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+} 
+.contacto-formulario input:focus, .contacto-formulario textarea:focus{
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 4px var(--color-acento);
+}
+.contacto-formulario button{
+    border: none;
+    width: 100%;
+}
+.contacto-info{
+    flex: 1 1 200px;
+    background-color: var(--color-terciario);
+    padding: 1rem;
+    border-radius: 5px;
+    height: fit-content;
+}
+.contacto-info h3{
+    margin-bottom: 1rem;
+}
+.contacto-info strong{
+    color: var(--color-acento);
+}
+.contacto-info a{
+    color: var(--color-texto-secundario);
+    transition: 0.3s ease;
+}
+.contacto-info a:hover{
+    color: var(--color-acento);
+    cursor: pointer;
 }
