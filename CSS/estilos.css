@@ -23,7 +23,7 @@ body{
     color: var(--color-texto);
     font-family: var(--fuente-principal);
     line-height: 1.65;
-    padding-top: 20dvh;
+    padding-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +41,7 @@ header{
     align-items: center;
     position: fixed;
     top: 0;
+    flex-wrap: wrap;
 
     transition: all 0.5s ease;
     animation: headerScroll linear both;
@@ -86,15 +87,20 @@ nav a{
     text-decoration: none;
     color: var(--color-texto-secundario);
     transition: 0.2s ease;
-    font-size: clamp(.6rem, 2vh, 1rem);
+    font-size: clamp(.6rem, 2vw, 1rem);
+    border-radius: 15px;
+    padding: .5rem 1rem;
 }
 nav a:hover{
-    color: var(--color-acento);
+    color: var(--color-secundario);
+    background-color: var(--color-acento);
 }
 
 footer{
     width: 100%;
-    height: 22dvh;
+    min-height: 22dvh;
+    height: auto;
+    box-sizing: border-box;
     background-color: var(--color-secundario);
     color: var(--color-texto);
     margin-top: 5dvh;
@@ -108,7 +114,7 @@ footer{
     width: 70%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 7dvh 5dvh;
+    grid-template-rows: auto auto;
     gap: 10px;
 }
 .info-footer{
@@ -165,7 +171,7 @@ footer p{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: clamp(.1rem, min(1vw, 2dvh), .9rem);
+    font-size: clamp(.1rem, 2vw, .9rem);
     font-weight: bold;
     border-top: 2px solid var(--color-acento);
     padding-top: 10px;
@@ -184,10 +190,10 @@ main{
     gap: 5dvh;
 }
 h2{
-    font-size: clamp(1rem, 5vh, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 h3{
-    font-size: clamp(.9rem, 4vh, 1.2rem);
+    font-size: clamp(.9rem, 4vw, 1.2rem);
 }
 h2, h3{
     color: var(--color-texto);
@@ -200,7 +206,7 @@ a{
 }
 p{
     color: var(--color-texto-secundario);
-    font-size: clamp(.8rem, 2vh, 1rem);
+    font-size: clamp(.8rem, 2vw, 1rem);
 }
 
 /* INDEX Y CIUDAD */
@@ -218,21 +224,22 @@ p{
 }
 .titulo-principal{
     max-width: 55dvw;
-    font-size: clamp(2rem, 9vh, 6rem);
+    font-size: clamp(2rem, 9vw, 6rem);
 }
 .presentacion p{
     max-width: 35dvw;
 }
 .boton{
-    width: 10dvw;
-    height: 5dvh;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-acento);
     color: var(--color-secundario);
     text-decoration: none;
-    font-size: clamp(.6rem, 1.3vh, .9rem);
+    font-size: clamp(.6rem, 1.3vw, .9rem);
     font-weight: bold;
     transition: .2s ease;
 }
@@ -248,9 +255,14 @@ p{
     gap: 3rem;
 }
 .identidad .contenedor{
-    display: grid;
     gap: 3rem;
-    grid-template-columns: 1.3fr 1fr;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.identidad p{
+    max-width: 50dvw;
 }
 .identidad a{
     color: var(--color-acento);
@@ -265,16 +277,16 @@ p{
 .identidad dt, .cultura strong, .itinerario li::marker, .datos dt{
     color: var(--color-acento);
     font-weight: 600;
-    font-size: clamp(.9rem, 2vh, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.1rem);
 }
 .identidad dd, .costumbres li, .datos dd{
     margin: 0;
     color: var(--color-texto-secundario);
-    font-size: clamp(.8rem, 2vh, 1rem);
+    font-size: clamp(.8rem, 2vw, 1rem);
 }
 .identidad img{
-    height: 100dvh;
-    max-width: 80dvw;
+    height: auto;
+    max-width: 80%;
 }
 
 
@@ -321,11 +333,11 @@ p{
 }
 .costumbres .contenedor{
     width: 97%;
+    padding: 3rem;
     margin: auto;
-    display: grid;
-    gap: 3dvw;
-    grid-template-columns: 1fr 1fr;
-
+    gap: 20dvw;
+    display: flex;
+    flex-wrap: wrap;
 }
 .costumbres ul{
     list-style: none;
@@ -334,13 +346,16 @@ p{
     padding-left: 20px;
 }
 .datos .contenedor{
-    display: grid;
-    gap: 3dvw;
-    grid-template-columns: 1.3fr 1fr;
-    align-items: center;
+    padding: 3rem;
+    margin: auto;
+    gap: 20dvw;
+    display: flex;
+    flex-wrap: wrap;
 }
 .datos img{
     height: 35dvh;
+    max-width: 100%;
+    width: auto;
 }
 figure{
     height: fit-content;
@@ -352,7 +367,7 @@ figcaption{
     font-family: var(--fuente-titulo);
     font-weight: lighter;
     letter-spacing: 1px;
-    font-size: clamp(.8rem, 2vh, 1rem);
+    font-size: clamp(.8rem, 2vw, 1rem);
 }
 
 /* CONTACTO */
@@ -380,6 +395,7 @@ figcaption{
 }
 .contacto-formulario label{
     color: var(--color-acento);
+    font-size: clamp(.8rem, 2vw, 1rem);
 }
 .contacto-formulario input, .contacto-formulario textarea{
     border: 1px solid var(--color-texto-secundario);
@@ -387,6 +403,7 @@ figcaption{
     border-radius: 5px;
     font-size: 1rem;
     font-family: var(--fuente-principal);
+    font-size: clamp(.8rem, 2vw, 1rem);
 } 
 .contacto-formulario input:focus, .contacto-formulario textarea:focus{
     outline: none;
