@@ -7,7 +7,7 @@
     --color-texto:#E2E8F0;
     --color-texto-secundario: #c9cfe8;
     --fuente-principal: "Source Serif 4", Georgia, serif;
-    --fuente-titulo: "Big Shoulders Display", Impact, sans-serif;
+    --fuente-titulo: "Big Shoulders", Impact, sans-serif;
 }
 
 /* RESET BÁSICO */
@@ -197,9 +197,8 @@ h3{
 }
 h2, h3{
     color: var(--color-texto);
-    letter-spacing: 2px;
     font-family: var(--fuente-titulo);
-    font-weight: 100;
+    font-weight: 800;
 }
 a{
     text-decoration: none;
@@ -365,9 +364,7 @@ figure{
 figcaption{
     padding: 0 0 5px 10px;
     font-family: var(--fuente-titulo);
-    font-weight: lighter;
-    letter-spacing: 1px;
-    font-size: clamp(.8rem, 2vw, 1rem);
+    font-size: clamp(.8rem, 2vw, 1.2rem);
 }
 
 /* CONTACTO */
