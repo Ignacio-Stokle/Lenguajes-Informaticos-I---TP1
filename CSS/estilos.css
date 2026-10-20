@@ -6,7 +6,7 @@
     --color-terciario:#283548;
     --color-texto:#E2E8F0;
     --color-texto-secundario: #c9cfe8;
-    --fuente-principal: "Source Serif 4", Georgia, serif;
+    --fuente-principal: "Rubik", sans-serif;
     --fuente-titulo: "Big Shoulders", Impact, sans-serif;
 }
 
@@ -22,13 +22,14 @@ body{
     background-color: var(--color-primario);
     color: var(--color-texto);
     font-family: var(--fuente-principal);
+    font-size: 1rem;
     line-height: 1.65;
     padding-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/* HEADER */
 header{
     height: fit-content;
     width: 100%;
@@ -55,8 +56,8 @@ header{
         border-radius: 0;
     }
     to{
-        width: 97%;
-        top: 10px;
+        width: 90%;
+        top: 20px;
         border-radius: 25px;
     }
 }
@@ -67,8 +68,22 @@ h1{
 
 .logo-titulo{
     height: 10dvh;
+
+    transition: all 0.5s ease;
+    animation: logotituloScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
 }
 
+@keyframes logotituloScroll{
+    from{
+        height: 10dvh;
+    }
+    to{
+        height: 8dvh;
+    }
+}
+/* NAVEGACION */
 nav ul{
     height: fit-content;
     width: fit-content;
@@ -90,12 +105,26 @@ nav a{
     font-size: clamp(.6rem, 2vw, 1rem);
     border-radius: 15px;
     padding: .5rem 1rem;
+
+    transition: all 0.5s ease;
+    animation: navScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+@keyframes navScroll{
+    from{
+        font-size: clamp(.6rem, 2vw, 1rem);
+    }
+    to{
+        font-size: clamp(.6rem, 2vw, .9rem);
+    }
 }
 nav a:hover{
     color: var(--color-secundario);
     background-color: var(--color-acento);
 }
 
+/* FOOTER */
 footer{
     width: 100%;
     min-height: 22dvh;
@@ -124,17 +153,17 @@ footer{
     justify-content: center;
 }
 .foot-lgo-nombre{
-    width: 15dvw;
-    height: 7dvh;
+    width: fit-content;
+    height: auto;
     display: flex;
     align-items: center;
 }
 .foot-lgo-nombre img{
-    max-height: 8dvh;
+    max-height: 6dvh;
 }
 .footer-redes{
-    width: 15dvw;
-    height: 7dvh;
+    width: fit-content;
+    height: auto;
     justify-self: end;
 }
 .footer-redes ul{
@@ -145,9 +174,10 @@ footer{
     justify-content: space-around;
     align-items: center;
     gap: 15px;
+    padding-right: 5px;
 }
 .footer-redes li{
-    width: 5dvw;
+    width: fit-content;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -180,7 +210,7 @@ footer span{
     text-align: start;
 }
 
-
+/* MAIN */
 main{
     width: 100%;
     height: 100%;
@@ -352,7 +382,8 @@ p{
     flex-wrap: wrap;
 }
 .datos img{
-    height: 35dvh;
+    max-height: 35dvh;
+    height: auto;
     max-width: 100%;
     width: auto;
 }
@@ -363,15 +394,14 @@ figure{
 }
 figcaption{
     padding: 0 0 5px 10px;
-    font-family: var(--fuente-titulo);
-    font-size: clamp(.8rem, 2vw, 1.2rem);
+    font-size: clamp(.8rem, 2vw, 1.1rem);
 }
 
 /* CONTACTO */
 .contacto{
     padding: 2rem;
     max-width: 90dvw;
-    margin: auto;
+    margin: auto 10dvw;
     background-color: var(--color-secundario);
     border-radius: 9px;
     line-height: 1.65;
@@ -405,7 +435,7 @@ figcaption{
 .contacto-formulario input:focus, .contacto-formulario textarea:focus{
     outline: none;
     border-color: var(--color-acento);
-    box-shadow: 0 0 4px var(--color-acento);
+    box-shadow: 0 0 6px var(--color-acento);
 }
 .contacto-formulario button{
     border: none;
