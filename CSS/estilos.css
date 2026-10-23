@@ -239,7 +239,7 @@ p{
 }
 
 /* INDEX Y CIUDAD */
-.presentacion, .identidad, .historia, .caracteristicas, .barrios, .datos{
+.identidad, .historia, .caracteristicas, .barrios, .datos{
     width: 95%;
 }
 .contenedor{
@@ -343,6 +343,43 @@ p{
     padding-left: 3dvw;
 }
 
+
+
+#presentacion, #presentacion-ciudad{
+    min-height: 60dvh;
+    width: 100%;
+    margin-bottom: 30dvh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+#presentacion::before, #presentacion-ciudad::before{
+    content: "";
+    position: absolute;
+    inset: 0; /*Funciona como darle 0 a bottom, top, left, right. Es un atajo*/
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#presentacion::before {
+    background-image: url("../IMG/espacio-coruscant.png");
+}
+#presentacion-ciudad::before {
+    background-image: url("../IMG/ciudad-dia.png");
+}
+#presentacion::after, #presentacion-ciudad::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+}
+#presentacion .contenedor, #presentacion-ciudad .contenedor{
+    width: 95%;
+}
+
 .grilla-ciudad{
     display: flex;
     flex-direction: column;
@@ -407,7 +444,7 @@ figcaption{
     line-height: 1.65;
 }
 .contacto p{
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .contenedor-contacto{
     display: flex;
@@ -424,7 +461,7 @@ figcaption{
     color: var(--color-acento);
     font-size: clamp(.8rem, 2vw, 1rem);
 }
-.contacto-formulario input, .contacto-formulario textarea{
+.contacto-formulario input, .contacto-formulario textarea, .contacto-formulario select{
     border: 1px solid var(--color-texto-secundario);
     padding: 0.7rem;
     border-radius: 5px;
@@ -432,7 +469,7 @@ figcaption{
     font-family: var(--fuente-principal);
     font-size: clamp(.8rem, 2vw, 1rem);
 } 
-.contacto-formulario input:focus, .contacto-formulario textarea:focus{
+.contacto-formulario input:focus, .contacto-formulario textarea:focus, .contacto-formulario select:focus{
     outline: none;
     border-color: var(--color-acento);
     box-shadow: 0 0 6px var(--color-acento);
@@ -462,3 +499,69 @@ figcaption{
     color: var(--color-acento);
     cursor: pointer;
 }
+.contacto-info h4{
+    color: var(--color-acento);
+}
+.contacto-info ul{
+    list-style: none;
+}
+.contacto-info li{
+    color: var(--color-texto-secundario);
+}
+.contacto-formulario fieldset {
+    margin: 3dvh 0;
+    padding: 1.5rem;
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: .2rem;
+}
+.contacto-formulario legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+.contacto-formulario .opcion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background-color: var(--color-texto);
+    color: #222;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contacto-formulario .opcion:hover {
+    background-color: var(--color-texto-secundario);
+}
+.contacto-formulario .opcion input{
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+.contacto-formulario .opcion:has(input:checked) {
+  background-color: var(--color-acento);
+  font-weight: bold;
+}
+.contacto-formulario .opcion:has(input:checked) {
+  background-color: #f5b800;
+  border-color: #f5b800;
+  font-weight: bold;
+}
+.contacto-formulario input[type="checkbox"]{
+    accent-color: var(--color-acento);
+}
+
+
+/* LUGARES */
+
+
+
+
+
+
+
+
+/* BOOTSTRAP */
