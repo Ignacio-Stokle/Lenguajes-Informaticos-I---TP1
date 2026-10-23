@@ -346,9 +346,9 @@ p{
 
 
 #presentacion, #presentacion-ciudad{
-    min-height: 60dvh;
+    min-height: 60vh;
     width: 100%;
-    margin-bottom: 30dvh;
+    margin-bottom: 30vh;
     display: flex;
     justify-content: center;
     overflow: hidden;
