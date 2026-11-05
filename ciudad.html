@@ -51,7 +51,7 @@
             <div class="contenedor">
                 <h2 class="titulo-principal">La ciudad por dentro</h2>
                 <p>Su historia, sus barrios y sus costumbres: lo que conviene saber antes de aterrizar.</p>
-                <a href="#datos" class="boton">Datos clave</a>
+                <a href="#datos" class="btn btn-primary">Datos clave</a>
             </div>
         </section>
 
@@ -110,16 +110,65 @@
         </section>
 
         <!--Seccion de costumbres-->
-        <section id="costumbres" class="costumbres">
-            <div class="contenedor">
+        <section id="costumbres" class="costumbres fondo">
+            <div class="contenedor dos-col">
                 <div>
                     <h2>Costumbres locales</h2>
-                    <ul class="cultura">
-                        <li><strong>El saludo:</strong> una leve inclinación de cabeza, sin importar la especie.</li>
-                        <li><strong>La hora dorada:</strong> al atardecer, las terrazas de los niveles altos se llenan de gente.</li>
-                        <li><strong>Mesas compartidas:</strong> en los mercados es normal comer junto a desconocidos.</li>
-                        <li><strong>Idiomas:</strong> se habla básico galáctico, pero cada barrio y especie conserva el suyo.</li>
-                    </ul>
+                    <div class="accordion" id="acordeon-costumbres">
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#costumbre-saludo" aria-expanded="true" aria-controls="costumbre-saludo">
+                                    El saludo
+                                </button>
+                            </h3>
+                            <div id="costumbre-saludo" class="accordion-collapse collapse show" data-bs-parent="#acordeon-costumbres">
+                                <div class="accordion-body">
+                                    <p>Una leve inclinación de cabeza, sin importar la especie.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costumbre-hora-dorada" aria-expanded="false" aria-controls="costumbre-hora-dorada">
+                                    La hora dorada
+                                </button>
+                            </h3>
+                            <div id="costumbre-hora-dorada" class="accordion-collapse collapse" data-bs-parent="#acordeon-costumbres">
+                                <div class="accordion-body">
+                                    <p>Al atardecer, las terrazas de los niveles altos se llenan de gente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costumbre-mesas-compartidas" aria-expanded="false" aria-controls="costumbre-mesas-compartidas">
+                                    Mesas compartidas
+                                </button>
+                            </h3>
+                            <div id="costumbre-mesas-compartidas" class="accordion-collapse collapse" data-bs-parent="#acordeon-costumbres">
+                                <div class="accordion-body">
+                                    <p>En los mercados es normal comer junto a desconocidos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costumbre-idiomas" aria-expanded="false" aria-controls="costumbre-idiomas">
+                                    Idiomas
+                                </button>
+                            </h3>
+                            <div id="costumbre-idiomas" class="accordion-collapse collapse" data-bs-parent="#acordeon-costumbres">
+                                <div class="accordion-body">
+                                    <p>Se habla básico galáctico, pero cada barrio conserva el suyo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div>
                     <h2>Consejos para el visitante</h2>

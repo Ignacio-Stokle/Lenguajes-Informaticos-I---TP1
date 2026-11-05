@@ -24,7 +24,6 @@ body{
     font-family: var(--fuente-principal);
     font-size: 1rem;
     line-height: 1.65;
-    padding-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +35,8 @@ header {
     width: 100%;
     background-color: var(--color-secundario);
     border-bottom: 2px solid var(--color-acento);
-    position: fixed;
+    position: sticky;
+    z-index: 1000;
     top: 0;
 
     transition: all 0.5s ease;
@@ -57,7 +57,7 @@ header {
     }
 }
 
-/* NAVEGACION DE BOOTSTRAP*/
+/* NAVEGACION */
 header nav ul {
     height: fit-content;
     width: fit-content;
@@ -88,42 +88,6 @@ h1{
         height: 8dvh;
     }
 }
-header nav .nav-link {
-    height: fit-content;
-    width: fit-content;
-    text-decoration: none;
-    color: var(--color-texto-secundario);
-    font-size: clamp(.8rem, 2vw, 1rem);
-    border-radius: 15px;
-    padding: .5rem 1rem;
-
-    transition: all 0.5s ease;
-    animation: navScroll linear both;
-    animation-timeline: scroll();
-    animation-range: 0 200px;
-}
-@keyframes navScroll {
-    from {
-        font-size: clamp(.8rem, 2vw, 1rem);
-    }
-    to {
-        font-size: clamp(.7rem, 2vw, .9rem);
-    }
-}
-header nav .nav-link:hover {
-    color: var(--color-secundario);
-    background-color: var(--color-acento);
-}
-header nav .navbar-toggler {
-    border-color: var(--color-secundario);
-}
-header nav .navbar-toggler:focus {
-    box-shadow: 0 var(--color-secundario);
-}
-header nav .navbar-toggler-icon {
-    filter: invert(1);
-}
-
 
 /* FOOTER */
 footer{
@@ -231,6 +195,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 5dvh;
+    padding-top: 150px;
 }
 h2{
     font-size: clamp(1rem, 5vw, 2rem);
@@ -270,24 +235,6 @@ p{
 }
 .presentacion p{
     max-width: 35dvw;
-}
-.boton{
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-acento);
-    color: var(--color-secundario);
-    text-decoration: none;
-    font-size: clamp(.6rem, 1.3vw, .9rem);
-    font-weight: bold;
-    transition: .2s ease;
-}
-.boton:hover{
-    background-color: var(--color-texto-secundario);
-    cursor: pointer;
 }
 
 .identidad{
@@ -559,8 +506,8 @@ figcaption{
   font-weight: bold;
 }
 .contacto-formulario .opcion:has(input:checked) {
-  background-color: #f5b800;
-  border-color: #f5b800;
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
   font-weight: bold;
 }
 .contacto-formulario input[type="checkbox"]{
@@ -578,3 +525,94 @@ figcaption{
 
 
 /* BOOTSTRAP */
+
+/* HEADER CON NAV RESPONSIVA */
+header nav .nav-link {
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vw, 1rem);
+    border-radius: 15px;
+    padding: .5rem 1rem;
+
+    transition: all 0.5s ease;
+    animation: navScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+@keyframes navScroll {
+    from {
+        font-size: clamp(.8rem, 2vw, 1rem);
+    }
+    to {
+        font-size: clamp(.7rem, 2vw, .9rem);
+    }
+}
+header nav .nav-link:hover {
+    color: var(--color-secundario);
+    background-color: var(--color-acento);
+}
+header nav .navbar-toggler {
+    border-color: var(--color-secundario);
+}
+header nav .navbar-toggler:focus {
+    box-shadow: 0 var(--color-secundario);
+}
+header nav .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* BOTONES DE INDEX Y CIUDAD */
+.btn-primary{
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: clamp(.6rem, 1.3vw, .9rem);
+    font-weight: bold;
+    transition: .2s ease;
+    border: none
+}
+.btn-primary:hover{
+    background-color: var(--color-texto-secundario);
+    color: var(--color-primario);
+    cursor: pointer;
+}
+
+/* ACORDEON DE COSTUMBRES */
+.costumbres .contenedor > div{
+    flex: 1 1 20rem;
+}
+.costumbres .accordion-item{
+    background-color: var(--color-secundario);
+    color: var(--color-texto-secundario);
+    border-color: var(--color-primario);
+    border-left: 3px solid var(--color-acento);
+}
+.costumbres .accordion-button{
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+.costumbres .accordion-button::after{
+    filter: invert(1);
+}
+.costumbres .accordion-body p{
+    margin-bottom: 0;
+}
+.costumbres .accordion-button:not(.collapsed){
+    background-color: var(--color-secundario);
+    color: var(--color-acento);
+    box-shadow: inset 0 -1px 0 var(--color-primario);
+}
+.costumbres .accordion-button:focus{
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 .2rem rgba(242, 169, 59, .35);
+}
