@@ -616,3 +616,93 @@ header nav .navbar-toggler-icon {
     border-color: var(--color-acento);
     box-shadow: 0 0 0 .2rem rgba(242, 169, 59, .35);
 }
+
+/* CARD OCULTA DE CONTACTO */
+.opciones-de-pago{
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--color-terciario);
+    color: var(--color-texto);
+    min-width: 250px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: auto;
+    border: 1px solid var(--color-secundario);
+    border-radius: 15px;
+}
+.opciones-de-pago fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#planes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#planes .card{
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-texto);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+#planes .card-title{
+    color: var(--color-acento);
+}
+#planes .card:hover{
+    cursor: pointer;
+    border-color: var(--color-acento);
+}
+#planes .card input{
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+#planes .card:has(input:checked) {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+#planes .card:has(input:checked) .card-title{
+    color: var(--color-primario);
+    font-weight: bold;
+}
+#planes .card input:focus{
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 6px var(--color-primario);
+}
+#planes .form-check-input:checked{
+    background-color: var(--color-primario);
+    border-color: var(--color-secundario);
+}
+#select-plan{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   display: none;
+   z-index: 999;
+}
+.mostrar{
+    display: block;
+}
+.overlay.mostrar{
+    display: block;
+}
