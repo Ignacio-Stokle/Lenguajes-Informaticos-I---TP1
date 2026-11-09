@@ -1,0 +1,708 @@
+ /* ACÁ ARMO MI PALETA */
+:root {
+    --color-primario: #12161F;
+    --color-acento: #f2a93b;
+    --color-secundario:#1D2633;
+    --color-terciario:#283548;
+    --color-texto:#E2E8F0;
+    --color-texto-secundario: #c9cfe8;
+    --fuente-principal: "Rubik", sans-serif;
+    --fuente-titulo: "Big Shoulders", Impact, sans-serif;
+}
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    line-height: 1.65;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-acento);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+
+    transition: all 0.5s ease;
+    animation: headerScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+@keyframes headerScroll {
+    from{
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+    to{
+        width: 90%;
+        top: 20px;
+        border-radius: 25px;
+    }
+}
+
+/* NAVEGACION */
+header nav ul {
+    height: fit-content;
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3dvw;
+    margin: 0;
+    padding: 10px;
+}
+h1{
+    display: none;
+}
+.logo-titulo{
+    height: 10dvh;
+
+    transition: all 0.5s ease;
+    animation: logotituloScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+@keyframes logotituloScroll{
+    from{
+        height: 10dvh;
+    }
+    to{
+        height: 8dvh;
+    }
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    min-height: 22dvh;
+    height: auto;
+    box-sizing: border-box;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    margin-top: 5dvh;
+    padding: 10px 0 25px;
+    border-top: 5px solid var(--color-acento);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-general{
+    display: grid;
+    width: 100%;
+    gap: 10px;
+}
+.info-footer{
+    width: 100%;
+    justify-content: center;
+}
+.foot-lgo-nombre{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.foot-lgo-nombre img{
+    max-height: 6dvh;
+}
+.footer-redes{
+    width: fit-content;
+    height: 100%;
+    justify-self: end;
+}
+.footer-redes ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    padding-right: 5px;
+}
+.footer-redes li{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-redes a{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+.footer-redes svg{
+    height: 3dvh;
+    width: fit-content;
+}
+footer p{
+    width: 100%;
+    height: fit-content;
+    color: var(--color-texto-secundario);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: clamp(.1rem, 2vw, .9rem);
+    font-weight: bold;
+    border-top: 2px solid var(--color-acento);
+    padding-top: 10px;
+}
+footer span{
+    text-align: start;
+}
+@media (max-width: 767px) {
+    .foot-lgo-nombre {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-redes {
+        width: 100%;
+    }
+    .footer-redes ul{
+        width: fit-content;
+        gap: 35px;
+        justify-content: center;
+        justify-self: center;
+    }
+}
+
+/* MAIN */
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5dvh;
+    padding-top: 150px;
+}
+h2{
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+h3{
+    font-size: clamp(.9rem, 4vw, 1.2rem);
+}
+h2, h3{
+    color: var(--color-texto);
+    font-family: var(--fuente-titulo);
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vw, 1rem);
+}
+
+/* INDEX Y CIUDAD */
+.identidad, .historia, .caracteristicas, .barrios, .datos{
+    width: 95%;
+}
+.contenedor{
+    width: 100%;
+    padding: 3dvh;
+}
+.presentacion .contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+}
+.titulo-principal{
+    max-width: 55dvw;
+    font-size: clamp(2rem, 9vw, 6rem);
+}
+.presentacion p{
+    max-width: 35dvw;
+}
+
+.identidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.identidad .contenedor{
+    gap: 3rem;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.identidad p{
+    max-width: 50dvw;
+}
+.identidad a{
+    color: var(--color-acento);
+    transition: .2s ease;
+}
+.identidad a:hover{
+    color: var(--color-texto);
+}
+.identidad dl, .cultura, .itinerario, .datos dl{
+    margin: 0;
+}
+.identidad dt, .cultura strong, .itinerario li::marker, .datos dt{
+    color: var(--color-acento);
+    font-weight: 600;
+    font-size: clamp(.9rem, 2vw, 1.1rem);
+}
+.identidad dd, .costumbres li, .datos dd{
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vw, 1rem);
+}
+.identidad img{
+    height: auto;
+    max-width: 80%;
+}
+
+
+.historia{
+    width: 100%;
+    background-color: var(--color-terciario);
+}
+.historia .contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.historia span{
+    color: var(--color-acento);
+}
+.cronologia{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.cronologia li{
+    border-left: 3px solid var(--color-acento);
+    padding-left: 3dvw;
+}
+
+
+
+#presentacion, #presentacion-ciudad{
+    min-height: 60vh;
+    width: 100%;
+    margin-bottom: 30vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+#presentacion::before, #presentacion-ciudad::before{
+    content: "";
+    position: absolute;
+    inset: 0; /*Funciona como darle 0 a bottom, top, left, right. Es un atajo*/
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#presentacion::before {
+    background-image: url("../IMG/espacio-coruscant.png");
+}
+#presentacion-ciudad::before {
+    background-image: url("../IMG/ciudad-dia.png");
+}
+#presentacion::after, #presentacion-ciudad::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+}
+#presentacion .contenedor, #presentacion-ciudad .contenedor{
+    width: 95%;
+}
+
+.grilla-ciudad{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 3dvh;
+}
+.tarjeta{
+    border-left: 3px solid var(--color-acento);
+    padding-left: 3dvw;
+}
+.tarjeta h3{
+    margin-bottom: 1dvh;
+}
+.costumbres{
+    background-color: var(--color-terciario);
+    width: 100%;
+}
+.costumbres .contenedor{
+    width: 97%;
+    padding: 3rem;
+    margin: auto;
+    gap: 20dvw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.costumbres ul{
+    list-style: none;
+}
+.itinerario{
+    padding-left: 20px;
+}
+.datos .contenedor{
+    padding: 3rem;
+    margin: auto;
+    gap: 20dvw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.datos img{
+    max-height: 35dvh;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+figure{
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--color-terciario);
+}
+figcaption{
+    padding: 0 0 5px 10px;
+    font-size: clamp(.8rem, 2vw, 1.1rem);
+}
+
+/* CONTACTO */
+.contacto{
+    padding: 2rem;
+    max-width: 90dvw;
+    margin: auto 10dvw;
+    background-color: var(--color-secundario);
+    border-radius: 9px;
+    line-height: 1.65;
+}
+.contacto p{
+    margin-bottom: 1rem;
+}
+.contenedor-contacto{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.contacto-formulario{
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2dvh;
+}
+.contacto-formulario label{
+    color: var(--color-acento);
+    font-size: clamp(.8rem, 2vw, 1rem);
+}
+.contacto-formulario input, .contacto-formulario textarea, .contacto-formulario select{
+    border: 1px solid var(--color-texto-secundario);
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+    font-size: clamp(.8rem, 2vw, 1rem);
+} 
+.contacto-formulario input:focus, .contacto-formulario textarea:focus, .contacto-formulario select:focus{
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 6px var(--color-acento);
+}
+.contacto-formulario button{
+    border: none;
+    width: 100%;
+}
+.contacto-info{
+    flex: 1 1 200px;
+    background-color: var(--color-terciario);
+    padding: 1rem;
+    border-radius: 5px;
+    height: fit-content;
+}
+.contacto-info h3{
+    margin-bottom: 1rem;
+}
+.contacto-info strong{
+    color: var(--color-acento);
+}
+.contacto-info a{
+    color: var(--color-texto-secundario);
+    transition: 0.3s ease;
+}
+.contacto-info a:hover{
+    color: var(--color-acento);
+    cursor: pointer;
+}
+.contacto-info h4{
+    color: var(--color-acento);
+}
+.contacto-info ul{
+    list-style: none;
+}
+.contacto-info li{
+    color: var(--color-texto-secundario);
+}
+.contacto-formulario fieldset {
+    margin: 3dvh 0;
+    padding: 1.5rem;
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: .2rem;
+}
+.contacto-formulario legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+.contacto-formulario .opcion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background-color: var(--color-texto);
+    color: #222;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contacto-formulario .opcion:hover {
+    background-color: var(--color-texto-secundario);
+}
+.contacto-formulario .opcion input{
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+.contacto-formulario .opcion:has(input:checked) {
+  background-color: var(--color-acento);
+  font-weight: bold;
+}
+.contacto-formulario .opcion:has(input:checked) {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  font-weight: bold;
+}
+.contacto-formulario input[type="checkbox"]{
+    accent-color: var(--color-acento);
+}
+
+
+/* LUGARES */
+
+
+
+
+
+
+
+
+/* BOOTSTRAP */
+
+/* HEADER CON NAV RESPONSIVA */
+header nav .nav-link {
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--color-texto-secundario);
+    font-size: clamp(.8rem, 2vw, 1rem);
+    border-radius: 15px;
+    padding: .5rem 1rem;
+
+    transition: all 0.5s ease;
+    animation: navScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+@keyframes navScroll {
+    from {
+        font-size: clamp(.8rem, 2vw, 1rem);
+    }
+    to {
+        font-size: clamp(.7rem, 2vw, .9rem);
+    }
+}
+header nav .nav-link:hover {
+    color: var(--color-secundario);
+    background-color: var(--color-acento);
+}
+header nav .navbar-toggler {
+    border-color: var(--color-secundario);
+}
+header nav .navbar-toggler:focus {
+    box-shadow: 0 var(--color-secundario);
+}
+header nav .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* BOTONES DE INDEX Y CIUDAD */
+.btn-primary{
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: clamp(.6rem, 1.3vw, .9rem);
+    font-weight: bold;
+    transition: .2s ease;
+    border: none
+}
+.btn-primary:hover{
+    background-color: var(--color-texto-secundario);
+    color: var(--color-primario);
+    cursor: pointer;
+}
+
+/* ACORDEON DE COSTUMBRES */
+.costumbres .contenedor > div{
+    flex: 1 1 20rem;
+}
+.costumbres .accordion-item{
+    background-color: var(--color-secundario);
+    color: var(--color-texto-secundario);
+    border-color: var(--color-primario);
+    border-left: 3px solid var(--color-acento);
+}
+.costumbres .accordion-button{
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+.costumbres .accordion-button::after{
+    filter: invert(1);
+}
+.costumbres .accordion-body p{
+    margin-bottom: 0;
+}
+.costumbres .accordion-button:not(.collapsed){
+    background-color: var(--color-secundario);
+    color: var(--color-acento);
+    box-shadow: inset 0 -1px 0 var(--color-primario);
+}
+.costumbres .accordion-button:focus{
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 .2rem rgba(242, 169, 59, .35);
+}
+
+/* CARD OCULTA DE CONTACTO */
+.opciones-de-pago{
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--color-terciario);
+    color: var(--color-texto);
+    min-width: 250px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: auto;
+    border: 1px solid var(--color-secundario);
+    border-radius: 15px;
+}
+.opciones-de-pago fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#planes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#planes .card{
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-texto);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+#planes .card-title{
+    color: var(--color-acento);
+}
+#planes .card:hover{
+    cursor: pointer;
+    border-color: var(--color-acento);
+}
+#planes .card input{
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+#planes .card:has(input:checked) {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+#planes .card:has(input:checked) .card-title{
+    color: var(--color-primario);
+    font-weight: bold;
+}
+#planes .card input:focus{
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 6px var(--color-primario);
+}
+#planes .form-check-input:checked{
+    background-color: var(--color-primario);
+    border-color: var(--color-secundario);
+}
+#select-plan{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   display: none;
+   z-index: 999;
+}
+.mostrar{
+    display: block;
+}
+.overlay.mostrar{
+    display: block;
+}
