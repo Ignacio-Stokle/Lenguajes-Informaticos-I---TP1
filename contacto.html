@@ -50,7 +50,7 @@
             <h2>Contacto</h2>
             <p>Si tenes dudas o queres comenzar a armar tu itinerario, completa el formulario o utiliza nuestros medios de contacto.</p>
             <div class="contenedor-contacto">
-                <form class="contacto-formulario">
+                <form class="contacto-formulario" id="contacto-formulario">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
@@ -86,7 +86,7 @@
                     </fieldset>
 
                     <label class="terminos"><input type="checkbox" required> Acepto el tratamiento de mis datos personales.</label>
-                    <button type="submit" class="boton">Enviar</button>
+                    <button type="submit" class="boton btn btn-primary" id="btn-form">Enviar</button>
                 </form>
 
                 <div class="contacto-info">
@@ -102,6 +102,41 @@
                 </div>
             </div>
         </section>
+
+        <!--CARD OCULTA QUE SE ABRE AL APRETAR EL BOTON DE ENVIAR - JS -->
+        <section class="opciones-de-pago d-none" id="opciones-de-pago"> <!-- d-none es display none de bootstrap, actua como un !important para que no la pise ningun estilo -->
+            <h2>Opciones de planes</h2>
+            <p>Distintas planes para tu comodidad</p>
+            <fieldset>
+                <legend class="form-label">Seleccione un plan</legend>
+                <div class="row row-cols-1 row-cols-md-2 g-3" id="planes">
+                    <div class="col">
+                        <label class="card h-100">
+                            <span class="card-body d-flex gap-3">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="opcion-de-pago" id="pago-economico" value="economico" form="contacto-formulario" checked>
+                                <span>
+                                    <span class="card-title d-block h5">Económico</span>
+                                    <span class="card-text d-block">$30.000 créditos galacticos por 1 mes</span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="card h-100">
+                            <span class="card-body d-flex gap-3">
+                                <input class="form-check-input flex-shrink-0" type="radio" name="opcion-de-pago" id="pago-extendido" value="extendido" form="contacto-formulario">
+                                <span>
+                                    <span class="card-title d-block h5">Plus +</span>
+                                    <span class="card-text d-block">$100.000 créditos galacticos por 3 meses</span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="select-plan" onclick="seleccionarPlan('opciones-de-pago')">SELECCIONAR PLAN</button>
+            </fieldset>
+        </section>
+        <div id="overlay" class="overlay"></div>
     </main>
     <footer>
         <div class="container footer-general">
@@ -148,5 +183,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
