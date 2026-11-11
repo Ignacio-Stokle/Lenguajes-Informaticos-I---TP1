@@ -1,13 +1,26 @@
  /* ACÁ ARMO MI PALETA */
 :root {
-    --color-primario: #12161F;
-    --color-acento: #f2a93b;
-    --color-secundario:#1D2633;
-    --color-terciario:#283548;
-    --color-texto:#E2E8F0;
-    --color-texto-secundario: #c9cfe8;
     --fuente-principal: "Rubik", sans-serif;
     --fuente-titulo: "Big Shoulders", Impact, sans-serif;
+}
+/* PALETA DE COLORES PARA LA PAGINA EN MODO OSCURO */
+:root[data-tema="oscuro"],
+header, footer, .presentacion{ /* SE MANTIENE HEADER Y FOOTER IGUALES EN AMBOS MODOS, AL IGUAL QUE LA PRESENTACION DE INDEX Y CIUDAD*/
+    --color-primario: #12161F;
+    --color-acento: #f2a93b;
+    --color-secundario: #1D2633;
+    --color-terciario: #283548;
+    --color-texto: #E2E8F0;
+    --color-texto-secundario: #c9cfe8;
+}
+/* PALETA DE COLORES PARA LA PAGINA EN MODO CLARO */
+:root[data-tema="claro"]{
+    --color-primario: #D9DEE7;
+    --color-acento: #b36b00;
+    --color-secundario: #E6EAF0;
+    --color-terciario: #C3CBD8;
+    --color-texto: #1D2633;
+    --color-texto-secundario: #404C60;
 }
 
 /* RESET BÁSICO */
@@ -87,6 +100,36 @@ h1{
     to{
         height: 8dvh;
     }
+}
+
+/* BOTONES DE MODO OSCURO Y CLARO */
+#btn-tema{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: none;
+    background: none;
+    border-radius: 15px;
+    border: 1px solid var(--color-secundario);
+    transition: 0.4s ease;
+}
+#btn-tema:hover{
+    cursor: pointer;
+    border-color: var(--color-acento);
+    background-color: var(--color-acento);
+}
+#btn-tema img{
+    height: 35px;
+}
+
+.icono-luna{
+    display: none;
+}
+[data-tema="claro"] .icono-luna{
+    display: block;
+}
+[data-tema="claro"] .icono-sol{
+    display: none;
 }
 
 /* FOOTER */
@@ -490,7 +533,7 @@ figcaption{
     padding: 8px 16px;
     border-radius: 999px;
     background-color: var(--color-texto);
-    color: #222;
+    color: var(--color-primario);
     cursor: pointer;
     transition: 0.2s;
 }
@@ -603,6 +646,9 @@ header nav .navbar-toggler-icon {
 }
 .costumbres .accordion-button::after{
     filter: invert(1);
+}
+[data-tema="claro"] .costumbres .accordion-button::after{
+    filter: none;
 }
 .costumbres .accordion-body p{
     margin-bottom: 0;

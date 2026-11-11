@@ -1,3 +1,4 @@
+// FORM CONTACTO - OVERLAY OCULTO
 const formulario = document.querySelector(".contacto-formulario");
 
 function mostrarTarjeta(id) {
@@ -22,3 +23,17 @@ function seleccionarPlan(id) {
     formulario.submit();
     alert("Plan seleccionado con exito");
 }
+
+// BOTON MODO OSCURO Y MODO CLARO
+const botonOscuroClaro = document.getElementById("btn-tema");
+
+botonOscuroClaro.addEventListener("click", () =>{
+    const html = document.documentElement;
+
+    if(html.dataset.tema === "oscuro"){
+        html.dataset.tema = "claro";
+    }
+    else{
+        html.dataset.tema = "oscuro";
+    }
+});
