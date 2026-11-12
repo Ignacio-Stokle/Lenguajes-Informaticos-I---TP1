@@ -53,13 +53,15 @@
     </header>
 
 
-    <main>
-        <h1>Coruscant</h1>
-        <p>
+    <main class="pagina-lugares">
+        <section class="presentacion-lugares contenedor">
+            <h1 class="titulo-principal">Coruscant</h1>
+            <p>
             Descubre los destinos más emblemáticos de Coruscant, desde monumetos históricos hasta centros de entretenimiento de clase galáctica.
-        </p>
+            </p>
+        </section>
 
-        <nav>
+        <nav class="indice-lugares contenedor">
             <h2>Indice</h2>
             <ol>
                 <li><a href="#templo-jedi">Templo Jedi</a></li>
@@ -69,15 +71,15 @@
             </ol>
         </nav>
 
-        <section id="Lugares_de_interés">
+        <section class="lugares-turisticos contenedor">
             <h2>Lugares turísticos</h2>
 
 
-            <article id="templo_jedi">
+            <article id="templo_jedi" class="tarjeta lugar-item">
                 <h3>Templo Jedi</h3>
                 <img src="./img/Templo_Jedi.png" alt="Templo_Jedi" width="400">
                 <p>El Templo Jedi es uno de los lugares más emblemáticos de Coruscant, hogar del orden jedi y un símbolo de la paz en la galaxia.</p>
-                <dl>
+                <dl class="lista-detallada">
                     <dt>Ubicación</dt>
                     <dd>Distrito federal, Niveles superiores</dd>
 
@@ -91,12 +93,12 @@
                 </dl>
             </article>
 
-            <article id="senado">
+            <article id="senado" class="tarjeta lugar-item">
                 <h3>Senado Galactico</h3>
                 <img src="./img/senado_galactico.png" alt="Senado_Galactico" width="400">
                 <p>Majestuosa estructura esférica que alberga el gran hemiciclo donde los senadores de
                      miles de sistemas estelares debaten el destino político de la República.</p>
-                <dl>
+                <dl class="lista-detallada">
                     <dt>Ubicacion</dt>
                     <dd>Distrito del Senado, Sector Central, Nivel 5127</dd>
                     <dt>Que se puede hacer</dt>
@@ -108,47 +110,49 @@
             </article>
         </section>
 
-        <section id="cultura">
+        <section id="cultura" class="propuestas-culturales contenedor">
             <h2>Propuestas Culturales</h2>
-            <article>
+            <article class="tarjeta lugar-item">
                 <h3>Opera Galáctica</h3>
                 <p>La afamada Casa de la Ópera de Coruscant presenta la producción acuática "Squid Lake",
                      interpretada por célebres artistas mon calamari. Se presenta todas las noches para diplomáticos,
                       senadores y entusiastas del arte de toda la galaxia</p>
             </article>
-            <article>
+            <article class="tarjeta lugar-item">
                 <h3>Museo de Historia e Identidad Galáctica</h3>
                 <p>Exposición interactiva que reúne artefactos antiguos de la época de la Antigua República
                      y esculturas representativas de los mundos del Núcleo</p>
             </article>
         </section>
 
-        <section id="actividades">
+        <section id="actividades" class="actividades-eventos contenedor">
             <h2>Actividades y eventos</h2>
 
+           <div>
             <h3>Algunas actividades para hacer</h3>
-            <ul>
+            <ul class="lista-eventos">
                 <li>Tour aéreo guiado en airspeeder por la línea de rascacielos superiores del Distrito Federal</li>
                 <li>Circuito gastronómico por los mercados de especias y comida exótica del sector medio</li>
                 <li>Recorrido histórico por la Plaza de los Picos de Manarai, la única superficie rocosa natural descubierta del planeta</li>
             </ul>
 
             <h3>Eventos</h3>
-            <ul>
+            <ul class="lista-eventos">
                 <li>Desfile Conmemorativo de la Fundación de la República (Duración: 3 días estándar galácticos)</li>
                 <li>Muestra Interactiva de Iluminación Holográfica y Arte Digital (Todos los fines de semana, de 20:00 a 02:00 hs estándar)</li>
                 <li>Simposio de Astronomía e Ingeniería Repulsora de la Capital (Del 12 al 16 del mes en curso)</li>
             </ul>
+           </div>
         </section>
 
-        <aside>
+        <aside class="consejos-visitante contenedor">
             <h2>Consejos para el visitante</h2>
             <p>
                 <em>Nota de seguridad: Para visitas a los niveles debajo del nivel 2000, se recomienda consultar con la guardia de Coruscant</em>
             </p>
         </aside>
 
-        <p><a href="#inicio">Volver arriba</a></p>
+        <p><a href="#" class="btn-primary btn-volver">Volver arriba</a></p>
 
     </main>
     <footer>

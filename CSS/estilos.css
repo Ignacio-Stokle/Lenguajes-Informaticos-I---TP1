@@ -560,13 +560,99 @@ figcaption{
 
 /* LUGARES */
 
-
-
-
-
-
-
-
+.pagina-lugares {
+    gap: 3dvh;
+    padding-bottom: 5dvh;
+}
+.presentacion-lugares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.presentacion-lugares p {
+    max-width: 60dvw;
+}
+.indice-lugares {
+    background-color: var(--color-secundario);
+    border-radius: 9px;
+    border-left: 3px solid var(--color-acento)
+}
+.indice-lugares ol {
+    list-style-position:inside;
+    margin-top: 1dvh;
+}
+.indice-lugares li {
+    color: var(--color-texto-secundario);
+}
+.indice-lugares li::marker {
+    color: var(--color-acento);
+    font-weight: bold;
+}
+.indice-lugares a {
+    color: var(--color-texto);
+    transition: color 0.2s ease;
+}
+.indice-lugares a:hover {
+    color: var(--color-acento);
+}
+.lugares-turisticos,
+.propuestas-culturales,
+.actividades-eventos {
+    background-color: var(--color-terciario);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+}
+.propuestas-culturales {
+    background-color: var(--color-secundario);
+}
+.pagina-lugares h2 {
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+    width: fit-content;
+}
+.lugar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 2dvh 0;
+}
+.lista-detallada {
+    margin-top: 2dvh;
+}
+.lista-detallada dt {
+    color: var(--color-acento);
+    font-weight: 600;
+    margin-top: 1dvh;
+}
+.lista-detallada dd {
+    color: var(--color-texto-secundario);
+    margin-left: 0;
+}
+.lista-eventos {
+    list-style: none;
+    margin: 2dvh 0;
+}
+.lista-eventos li {
+    border-left: 3px solid var(--color-acento);
+    padding-left: 2dvw;
+    margin-bottom: 1dvh;
+    color: var(--color-texto-secundario);
+}
+.consejos-visitante {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-acento);
+    border-radius: 9px;
+    text-align: center;
+}
+.consejos-visitante h2 {
+    margin: 0 auto 1dvh auto;
+}
+.consejos-visitante p {
+    color: var(--color-texto);
+}
 /* BOOTSTRAP */
 
 /* HEADER CON NAV RESPONSIVA */
