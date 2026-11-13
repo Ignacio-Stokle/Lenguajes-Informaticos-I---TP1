@@ -101,6 +101,10 @@ h1{
         height: 8dvh;
     }
 }
+header nav .nav-link.active {
+    color: var(--color-secundario);
+    background-color: var(--color-acento);
+}
 
 /* BOTONES DE MODO OSCURO Y CLARO */
 #btn-tema{

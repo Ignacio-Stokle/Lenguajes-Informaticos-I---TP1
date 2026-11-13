@@ -37,3 +37,15 @@ botonOscuroClaro.addEventListener("click", () =>{
         html.dataset.tema = "oscuro";
     }
 });
+
+// NavBar pestaña activa
+const navLinks = document.querySelectorAll('.nav-link');
+const windowPathname = window.location.pathname;
+
+navLinks.forEach(navLink => {
+    const LinkPathName = new URL(navLink.href).pathname;
+
+    if(LinkPathName === windowPathname) {
+        navLink.classList.add('active');
+    }
+})
