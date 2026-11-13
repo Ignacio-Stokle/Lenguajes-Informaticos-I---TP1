@@ -838,3 +838,80 @@ header nav .navbar-toggler-icon {
 .overlay.mostrar{
     display: block;
 }
+/* Bootstrap Lugares */
+
+/* Carousel Lugares*/
+.carousel-lugares {
+    width: 100%;
+}
+
+.carousel-lugares .carousel-item {
+    padding: .5rem .25rem;
+}
+
+.carousel-lugar-imagen {
+    display: block;
+    width: 100%;
+    height: clamp(230px, 34vw, 430px);
+    object-fit: cover;
+    border-radius: 9px;
+    margin: 0;
+}
+
+.carousel-lugar-contenido {
+    padding: .75rem 1.25rem;
+}
+
+.carousel-lugar-contenido h3 {
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+}
+
+.carousel-lugar-contenido p {
+    color: var(--color-texto-secundario);
+}
+
+.carousel-lugares-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.carousel-lugares-controles .btn {
+    color: var(--color-texto);
+    border-color: var(--color-acento);
+}
+
+.carousel-lugares-controles .btn:hover,
+.carousel-lugares-controles .btn:focus-visible {
+    color: var(--color-primario);
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+}
+
+.carousel-lugares-indicadores {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0;
+}
+
+.carousel-lugares-indicadores [data-bs-target] {
+    box-sizing: border-box;
+    width: 11px;
+    height: 11px;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-acento);
+    opacity: .4;
+}
+
+.carousel-lugares-indicadores .active {
+    opacity: 1;
+}
+

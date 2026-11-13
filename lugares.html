@@ -55,7 +55,7 @@
 
     <main class="pagina-lugares">
         <section class="presentacion-lugares contenedor">
-            <h1 class="titulo-principal">Coruscant</h1>
+            <h2 class="titulo-principal">Coruscant</h2>
             <p>
             Descubre los destinos más emblemáticos de Coruscant, desde monumetos históricos hasta centros de entretenimiento de clase galáctica.
             </p>
@@ -71,43 +71,69 @@
             </ol>
         </nav>
 
-        <section class="lugares-turisticos contenedor">
-            <h2>Lugares turísticos</h2>
+        <section class="lugares-turisticos contenedor" aria-labelledby="titulo-turisticos">
+            <h2 id="titulo-turisticos">Lugares turísticos</h2>
 
+            <div id="carouselLugares" class="carousel slide carouselLugares" aria-label="Destinos turisticos de Coruscant">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <article id="templo-jedi" class="row align-items-center g-4 lugar-item">
+                            <div class="col-12 col-lg-5">
+                                <img class="img-fluid carousel-lugar-imagen" src="./img/Templo_Jedi.png" alt="Vista del templo jedi de Coruscant">
+                            </div>
+                            <div class="col-12 col-lg-7 carousel-lugar-contenido">
+                                <h3>Templo Jedi</h3>
+                                <p>El Templo Jedi es uno de los lugares más emblemáticos de Coruscant, hogar del orden jedi y un símbolo de la paz en la galaxia.</p>
+                                <dl class="lista-detallada">
+                                    <dt>Ubicación</dt>
+                                    <dd>Distrito federal, Niveles superiores</dd>
 
-            <article id="templo_jedi" class="tarjeta lugar-item">
-                <h3>Templo Jedi</h3>
-                <img src="./img/Templo_Jedi.png" alt="Templo_Jedi" width="400">
-                <p>El Templo Jedi es uno de los lugares más emblemáticos de Coruscant, hogar del orden jedi y un símbolo de la paz en la galaxia.</p>
-                <dl class="lista-detallada">
-                    <dt>Ubicación</dt>
-                    <dd>Distrito federal, Niveles superiores</dd>
+                                    <dt>Que se puede hacer</dt>
+                                    <dd>Recorridos guiados por los salones de los Archivos Jedi, observación de las icónicas Agujas del Templo 
+                                        y sesiones de meditación en el Gran Salón.</dd>
 
-                    <dt>Que se puede hacer</dt>
-                    <dd>Recorridos guiados por los salones de los Archivos Jedi, observación de las icónicas Agujas del Templo 
-                         y sesiones de meditación en el Gran Salón.</dd>
+                                    <dt>Por que visitarlo</dt>
+                                    <dd>Es una de las estructuras más antiguas e imponentes de Coruscant,
+                                        ofreciendo un ambiente de serenidad único en medio del bullicio planetario.</dd>
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
 
-                    <dt>Por que visitarlo</dt>
-                    <dd>Es una de las estructuras más antiguas e imponentes de Coruscant,
-                         ofreciendo un ambiente de serenidad único en medio del bullicio planetario.</dd>
-                </dl>
-            </article>
+                    <div class="carousel-item">
+                        <article id="senado" class="row align-items-center g-4 lugar-item">
+                            <div class="col-12 col-lg-5">
+                                <img class="img-fluid carousel-lugar-imagen" src="./img/senado_galactico.png" alt="Edificio del Senado Galactico de Coruscant">
+                            </div>
+                            <div class="col-12 col-lg-7 carousel-lugar-contenido">
+                                <h3>Senado Galactico</h3>
+                                <p>Majestuosa estructura esférica que alberga el gran hemiciclo donde los senadores de
+                                    miles de sistemas estelares debaten el destino político de la República.</p>
+                                <dl class="lista-detallada">
+                                    <dt>Ubicacion</dt>
+                                    <dd>Distrito del Senado, Sector Central, Nivel 5127</dd>
 
-            <article id="senado" class="tarjeta lugar-item">
-                <h3>Senado Galactico</h3>
-                <img src="./img/senado_galactico.png" alt="Senado_Galactico" width="400">
-                <p>Majestuosa estructura esférica que alberga el gran hemiciclo donde los senadores de
-                     miles de sistemas estelares debaten el destino político de la República.</p>
-                <dl class="lista-detallada">
-                    <dt>Ubicacion</dt>
-                    <dd>Distrito del Senado, Sector Central, Nivel 5127</dd>
-                    <dt>Que se puede hacer</dt>
-                    <dd>Presenciar sesiones de debate galáctico desde las galerías de visitantes,
-                         recorrer el Gran Atrio de la Conciliación y observar las icónicas plataformas flotantes repulsoras</dd>
-                    <dt>Por que visitarlo</dt>
-                    <dd>Es el epicentro de la democracia galáctica y un hito arquitectónico e histórico de primer orden en el Núcleo</dd>
-                </dl>
-            </article>
+                                    <dt>Que se puede hacer</dt>
+                                    <dd>Presenciar sesiones de debate galáctico desde las galerías de visitantes,
+                                        recorrer el Gran Atrio de la Conciliación y observar las icónicas plataformas flotantes repulsoras</dd>
+
+                                    <dt>Por que visitarlo</dt>
+                                    <dd>Es el epicentro de la democracia galáctica y un hito arquitectónico e histórico de primer orden en el Núcleo</dd>
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="carousel-lugares-controles">
+                    <button class="btn btn-outline-secondary" type="button" data-bs-target="#carouselLugares" data-bs-slide="prev" aria-label="Mostrar destino anterior">Anterior</button>
+                    <div class="carousel-indicators carousel-lugares-indicadores">
+                        <button type="button" data-bs-target="#carouselLugares" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mostrar Templo Jedi"></button>
+                        <button type="button" data-bs-target="#carouselLugares" data-bs-slide-to="1" aria-label="Mostrar Senado Galactico"></button> 
+                    </div>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-target="#carouselLugares" data-bs-slide="next" aria-label="Mostrar destino siguiente">Siguiente</button>
+                </div>
+            </div>
         </section>
 
         <section id="cultura" class="propuestas-culturales contenedor">
