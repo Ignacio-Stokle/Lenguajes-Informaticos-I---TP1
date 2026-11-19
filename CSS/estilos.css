@@ -569,13 +569,41 @@ figcaption{
     padding-bottom: 5dvh;
 }
 .presentacion-lugares {
+    min-height: 60vh;
+    width: 100%;
+    margin-bottom: 30vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    overflow: hidden;
+}
+.presentacion-lugares::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(/IMG/Coruscant-vista-panoramica.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.presentacion-lugares::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+}
+.presentacion-lugares .titulo-principal {
+    display: block;
+    color: #fff;
 }
 .presentacion-lugares p {
-    max-width: 60dvw;
+    max-width: 35dvw;
+    color: #fff;
 }
 .indice-lugares {
     background-color: var(--color-secundario);
@@ -613,7 +641,6 @@ figcaption{
     background-color: var(--color-secundario);
 }
 .pagina-lugares h2 {
-    border-bottom: 2px solid var(--color-acento);
     padding-bottom: 10px;
     width: fit-content;
 }
