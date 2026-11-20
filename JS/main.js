@@ -25,10 +25,14 @@ function seleccionarPlan(id) {
 }
 
 // BOTON MODO OSCURO Y MODO CLARO
+const html = document.documentElement;
 const botonOscuroClaro = document.getElementById("btn-tema");
+const guardado = localStorage.getItem("tema"); // Al cargar: aplicar el tema guardado (si hay uno)
+if (guardado) {
+    html.dataset.tema = guardado;
+}
 
 botonOscuroClaro.addEventListener("click", () =>{
-    const html = document.documentElement;
 
     if(html.dataset.tema === "oscuro"){
         html.dataset.tema = "claro";
@@ -36,6 +40,7 @@ botonOscuroClaro.addEventListener("click", () =>{
     else{
         html.dataset.tema = "oscuro";
     }
+    localStorage.setItem("tema", html.dataset.tema);
 });
 
 // NavBar pestaña activa
